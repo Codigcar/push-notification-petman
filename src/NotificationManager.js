@@ -10,8 +10,18 @@ class NotificationManager {
             },
             onNotification: function (notification) {
                 console.log('NOTIFICATION:', notification);
+                const { channelId, title, message, data,  } = notification;
+                this.showNotification2(channelId, title, message, data );
                 notification.finish(PushNotificationIOS.FetchResult.NoData);
             },
+            onAction: function (notification) {
+                console.log('ACTION:', notification.action);
+                console.log('NOTIFICATION:', notification);
+                // process the action
+              },
+              onRegistrationError: function (err) {
+                console.error(err.message, err);
+              },
             permissions: {
                 alert: true,
                 badge: true,
@@ -42,6 +52,7 @@ class NotificationManager {
             priority: options.priority || 'high',
             importance: options.importance || 'high',
             data: data,
+            foreground:true
         };
     };
     buildIOSNotification = (id, title, message , data = {}, options = {}) => {
@@ -62,7 +73,8 @@ class NotificationManager {
         }
     };
 
-    showNotification = (id, title, message, data = {}, options = {}, date) => {
+    showNotification2 = (id, title, message, data = {}, options = {}) => {
+        let date = new Date();
         PushNotification.localNotificationSchedule({
             //Android
             ...this.buildAdroidNotification(id, title, message, data, options),
@@ -76,6 +88,9 @@ class NotificationManager {
             playSound: options.playSound || false,
             soundName: options.soundName || 'default',
             date: date,
+            //
+            userInteraction: false, // BOOLEAN: If the notification was opened by the user from the notification area or not
+            foreground: true
         });
     };
     unregister = () => {

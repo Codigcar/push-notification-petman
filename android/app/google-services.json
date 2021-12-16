@@ -1,41 +1,34 @@
 {
   "project_info": {
-    "project_number": "816914778940",
-    "project_id": "example-push-802aa",
-    "storage_bucket": "example-push-802aa.appspot.com"
+    "project_number": "404299890410",
+    "project_id": "pushios-33266",
+    "storage_bucket": "pushios-33266.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:816914778940:android:891f413bda230cca7d6c39",
+        "mobilesdk_app_id": "1:404299890410:android:a394570c4b8cd6b35c2193",
         "android_client_info": {
-          "package_name": "com.marioarbanil.examplepush"
+          "package_name": "com.pushios"
         }
       },
       "oauth_client": [
         {
-          "client_id": "816914778940-5dp0ih4i69709q8kveuc4sdp0v902sr2.apps.googleusercontent.com",
+          "client_id": "404299890410-4unspon1fu4f5lkjuabcrv35roadvqp9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDsotJuG3cFSnp99Vdr4kit8ETY6rE2a3k"
+          "current_key": "AIzaSyCnV9ubJZzzlPFI3ZmPY15v9uz1JseFXM0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "816914778940-5dp0ih4i69709q8kveuc4sdp0v902sr2.apps.googleusercontent.com",
+              "client_id": "404299890410-4unspon1fu4f5lkjuabcrv35roadvqp9.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "816914778940-400nrc5008famcrn8qgkghmde025uqt5.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.marioarbanil.examplepush"
-              }
             }
           ]
         }

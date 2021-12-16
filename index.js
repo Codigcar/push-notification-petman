@@ -14,18 +14,27 @@ AppRegistry.registerComponent(appName, () => App);
  import PushNotification from 'react-native-push-notification';
  import App from './App';
  import { name as appName } from './app.json';
+import { notificationManager } from './src/NotificationManager';
  
  // Must be outside of any component LifeCycle (such as `componentDidMount`).
  PushNotification.configure({
    // (optional) Called when Token is generated (iOS and Android)
    onRegister: function (token) {
      console.log('TOKEN:', token);
+    //  notificationManager.configure()
    },
  
    // (required) Called when a remote is received or opened, or local notification is opened
    onNotification: function (notification) {
      console.log('NOTIFICATION:', notification);
- 
+     const { channelId, title, message, data } = notification;
+     console.log('channelId: ',channelId);
+     console.log('title: ',title);
+     console.log('message: ',message);
+     console.log('data: ',data);
+      // notificationManager.showNotification2()
+      notificationManager.showNotification2(123, title, message, data );
+
      // process the notification
      // (required) Called when a remote is received or opened, or local notification is opened
      notification.finish(PushNotificationIOS.FetchResult.NoData);
@@ -55,15 +64,18 @@ AppRegistry.registerComponent(appName, () => App);
  
    popInitialNotification: true,
  
-   /**
-    * (optional) default: true
-    * - Specified if permissions (ios) and token (android and ios) will requested or not,
-    * - if not, you must call PushNotificationsHandler.requestPermissions() later
-    * - if you are not using remote notification or do not have Firebase installed, use this:
-    *     requestPermissions: Platform.OS === 'ios'
-    */
+    // * (optional) default: true
+    // * - Specified if permissions (ios) and token (android and ios) will requested or not,
+    // * - if not, you must call PushNotificationsHandler.requestPermissions() later
+    // * - if you are not using remote notification or do not have Firebase installed, use this:
+    // *     requestPermissions: Platform.OS === 'ios'
  
    requestPermissions: true,
  });
  
+//  notificationManager.configure();
+
+
+
+
  AppRegistry.registerComponent(appName, () => App);
