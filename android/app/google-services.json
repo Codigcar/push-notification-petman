@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "816914778940",
+    "project_id": "example-push-802aa",
+    "storage_bucket": "example-push-802aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816914778940:android:891f413bda230cca7d6c39",
+        "android_client_info": {
+          "package_name": "com.marioarbanil.examplepush"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "816914778940-5dp0ih4i69709q8kveuc4sdp0v902sr2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsotJuG3cFSnp99Vdr4kit8ETY6rE2a3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "816914778940-5dp0ih4i69709q8kveuc4sdp0v902sr2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "816914778940-400nrc5008famcrn8qgkghmde025uqt5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.marioarbanil.examplepush"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
